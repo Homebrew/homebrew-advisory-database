@@ -31,7 +31,13 @@ Records are produced by [`brew vulns --osv-export`](https://github.com/Homebrew/
 
 ## Status
 
-Not yet registered with osv.dev. The plan is to transfer this repository into the Homebrew organisation and then open a [new data source](https://google.github.io/osv.dev/data/new) request, reserving the `BREW-` id prefix and `Homebrew` ecosystem in [ossf/osv-schema](https://github.com/ossf/osv-schema).
+Not yet registered with osv.dev. The plan is to transfer this repository into the Homebrew organisation and then open a [new data source](https://google.github.io/osv.dev/data/new) request.
+
+Upstream registrations needed:
+
+- `BREW-` id prefix and `Homebrew` ecosystem in [ossf/osv-schema](https://github.com/ossf/osv-schema) (the validate workflow patches these into the schema enum until then)
+- `pkg:brew` purl type in package-url/purl-spec — proposed in [package-url/purl-spec#796](https://github.com/package-url/purl-spec/pull/796), tracked in [#254](https://github.com/package-url/purl-spec/issues/254)
+- `pkg:brew` handling in osv.dev's `purl_helpers.py` and a Homebrew version comparator in `_ecosystems.py`
 
 ## License
 
