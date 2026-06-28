@@ -1,0 +1,39 @@
+name: Validate
+
+on:
+  push:
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  schema:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+
+      - uses: actions/setup-python@v6
+        with:
+          python-version: "3.x"
+
+      - name: Install check-jsonschema
+        run: pip install check-jsonschema
+
+      - name: Fetch OSV schema
+        run: curl -sSfL -o osv-schema.json https://raw.githubusercontent.com/ossf/osv-schema/main/validation/schema.json
+
+      # The BREW- id prefix and Homebrew ecosystem are not yet registered in
+      # ossf/osv-schema; patch them into the enum patterns so structural
+      # validation still runs. Remove once the registration PR lands.
+      - name: Patch schema for pending BREW prefix and Homebrew ecosystem
+        run: |
+          ruby -rjson -e '
+            s = JSON.parse(File.read("osv-schema.json"))
+            s["$defs"]["prefix"]["pattern"].sub!(/\|CVE\|/, "|BREW|CVE|")
+            s["$defs"]["ecosystemWithSuffix"]["pattern"].sub!(/\|GIT\)/, "|Homebrew|GIT)")
+            File.write("osv-schema.json", JSON.pretty_generate(s))
+          '
+
+      - name: Validate advisories against OSV schema
+        run: check-jsonschema --schemafile osv-schema.json advisories/*.json

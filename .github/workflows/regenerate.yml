@@ -1,0 +1,41 @@
+name: Regenerate
+
+on:
+  schedule:
+    - cron: "20 6 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  regenerate:
+    runs-on: macos-latest
+    steps:
+      - uses: actions/checkout@v5
+
+      - name: Set up Homebrew
+        uses: Homebrew/actions/setup-homebrew@main
+
+      - name: Install brew-vulns
+        run: gem install brew-vulns
+
+      - name: Regenerate advisories
+        env:
+          HOMEBREW_NO_AUTO_UPDATE: "1"
+          HOMEBREW_NO_INSTALL_FROM_API: "1"
+        run: |
+          rm -f advisories/*.json
+          brew-vulns --osv-export advisories
+
+      - name: Commit changes
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add advisories/
+          if git diff --cached --quiet; then
+            echo "No changes."
+          else
+            git commit -m "Regenerate advisories"
+            git push
+          fi
