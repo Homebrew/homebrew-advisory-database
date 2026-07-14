@@ -10,7 +10,7 @@ If a `homebrew/core` formula already ships a patch that fixes a CVE, the simples
 
 Open a pull request adding a file under `advisories/` when you want to record something the generated path cannot express, most commonly that a formula version is affected and Homebrew has not yet applied a fix.
 
-Before opening the PR, report the issue upstream according to the project's security policy and wait for it to be acknowledged. If you believe the vulnerability is being actively exploited against Homebrew users, or the upstream project is unresponsive after a reasonable disclosure window, open a [private security advisory](https://github.com/Homebrew/homebrew-advisory-database/security/advisories/new) on this repository instead of a public PR.
+Before opening the PR, report the issue upstream according to the project's security policy and wait for it to be acknowledged. If you believe the vulnerability is being actively exploited against Homebrew users, or the upstream project is unresponsive after a reasonable disclosure window, open a [private security advisory](https://github.com/Homebrew/advisory-database/security/advisories/new) on this repository instead of a public PR.
 
 Name the file `BREW-0000-0000.json`; a maintainer assigns the final id on merge. The record must validate against the OSV schema and use the `Homebrew` ecosystem with a `pkg:brew/<formula>` purl. A minimal example:
 
