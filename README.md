@@ -27,16 +27,14 @@ Homebrew versions are the upstream version with an optional `_N` revision suffix
 
 ## Generation
 
-Records are produced by [`brew vulns --osv-export`](https://github.com/Homebrew/homebrew-brew-vulns) and regenerated daily by the `Regenerate` workflow. Every push is validated against the OSV JSON schema.
+Records are produced by [`brew-vulns --osv-export`](https://github.com/Homebrew/homebrew-brew-vulns) and regenerated daily by the `Regenerate` workflow. The exporter is being folded into the built-in `brew vulns` command (Homebrew/brew#23080) and the workflow will switch over once that lands. Every push is validated against the OSV JSON schema.
 
 ## Status
 
-Not yet registered with osv.dev. The plan is to transfer this repository into the Homebrew organisation and then open a [new data source](https://google.github.io/osv.dev/data/new) request.
+The `Homebrew` ecosystem and `BREW-` id prefix are registered in the OSV schema ([ossf/osv-schema#576](https://github.com/ossf/osv-schema/pull/576)) and `pkg:brew` is a registered purl type ([package-url/purl-spec#796](https://github.com/package-url/purl-spec/pull/796)).
 
-Upstream registrations needed:
+Not yet ingested by osv.dev. Remaining before opening a [new data source](https://google.github.io/osv.dev/data/new) request:
 
-- `BREW-` id prefix and `Homebrew` ecosystem in [ossf/osv-schema](https://github.com/ossf/osv-schema) (the validate workflow patches these into the schema enum until then)
-- `pkg:brew` purl type in package-url/purl-spec — proposed in [package-url/purl-spec#796](https://github.com/package-url/purl-spec/pull/796), tracked in [#254](https://github.com/package-url/purl-spec/issues/254)
 - `pkg:brew` handling in osv.dev's `purl_helpers.py` and a Homebrew version comparator in `_ecosystems.py`
 
 ## License
