@@ -17,16 +17,14 @@ jobs:
       - name: Set up Homebrew
         uses: Homebrew/actions/setup-homebrew@main
 
-      - name: Install brew-vulns
-        run: gem install brew-vulns
-
       - name: Regenerate advisories
         env:
           HOMEBREW_NO_AUTO_UPDATE: "1"
           HOMEBREW_NO_INSTALL_FROM_API: "1"
+          HOMEBREW_DEVELOPER: "1"
         run: |
           rm -f advisories/*.json
-          brew-vulns --osv-export advisories
+          brew generate-vulns-advisories advisories
 
       - name: Commit changes
         run: |
