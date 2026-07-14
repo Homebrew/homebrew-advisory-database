@@ -33,5 +33,5 @@ jobs:
             echo "No changes."
           else
             git commit -m "Regenerate advisories"
-            git push
+            git push origin "HEAD:${GITHUB_REF_NAME}"
           fi
