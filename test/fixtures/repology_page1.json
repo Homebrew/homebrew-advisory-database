@@ -1,0 +1,40 @@
+{
+  "curl": [
+    {"repo": "homebrew", "srcname": "curl", "version": "8.8.0", "status": "newest"},
+    {"repo": "debian_12", "srcname": "curl", "version": "7.88.1", "status": "outdated"},
+    {"repo": "debian_13", "srcname": "curl", "version": "8.5.0", "status": "outdated"},
+    {"repo": "ubuntu_24_04", "srcname": "curl", "version": "8.5.0", "status": "outdated"},
+    {"repo": "alpine_3_22", "srcname": "curl", "version": "8.8.0", "status": "newest"},
+    {"repo": "alpine_3_17", "srcname": "curl", "version": "7.87.0", "status": "legacy"},
+    {"repo": "opensuse_tumbleweed", "srcname": "curl", "version": "8.8.0", "status": "newest"},
+    {"repo": "openeuler_24_03", "srcname": "curl", "version": "8.4.0", "status": "outdated"},
+    {"repo": "ubi_8", "srcname": "curl", "version": "7.61.1", "status": "outdated"},
+    {"repo": "freebsd", "srcname": "ftp/curl", "binname": "curl", "version": "8.8.0", "status": "newest"},
+    {"repo": "scoop", "binname": "curl", "version": "8.8.0", "status": "newest"}
+  ],
+  "ack": [
+    {"repo": "homebrew", "srcname": "ack", "version": "3.7.0", "status": "newest"},
+    {"repo": "ubuntu_22_04", "srcname": "ack", "version": "3.5.0", "status": "outdated"},
+    {"repo": "ubuntu_18_04", "srcname": "ack-grep", "version": "2.22", "status": "outdated"}
+  ],
+  "apache-ant": [
+    {"repo": "homebrew", "srcname": "ant", "version": "1.10.14", "status": "newest"},
+    {"repo": "homebrew", "srcname": "ant@1.9", "version": "1.9.16", "status": "outdated"},
+    {"repo": "debian_12", "srcname": "ant", "version": "1.10.13", "status": "outdated"}
+  ],
+  "antlr": [
+    {"repo": "homebrew", "srcname": "antlr", "version": "4.13.1", "status": "newest"},
+    {"repo": "homebrew", "srcname": "antlr4-cpp-runtime", "version": "4.13.1", "status": "newest"},
+    {"repo": "debian_12", "srcname": "antlr3", "version": "3.5.2", "status": "outdated"},
+    {"repo": "debian_12", "srcname": "antlr4", "version": "4.9.2", "status": "outdated"},
+    {"repo": "debian_12", "srcname": "antlr4-cpp-runtime", "version": "4.9.2", "status": "outdated"}
+  ],
+  "libgee": [
+    {"repo": "homebrew", "srcname": "libgee", "version": "0.20.8", "status": "newest"},
+    {"repo": "debian_12", "srcname": "libgee-0.8", "version": "0.20.6", "status": "outdated"},
+    {"repo": "alpine_3_22", "srcname": "libgee", "version": "0.20.8", "status": "newest"}
+  ],
+  "brew-only-tool": [
+    {"repo": "homebrew", "srcname": "brew-only-tool", "version": "1.0", "status": "unique"}
+  ]
+}
