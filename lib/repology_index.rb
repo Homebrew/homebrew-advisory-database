@@ -4,6 +4,7 @@ require "fileutils"
 require "json"
 require "net/http"
 require "openssl"
+require "timeout"
 require "uri"
 
 # Builds `data/repology.json` by paginating the Repology API for every
