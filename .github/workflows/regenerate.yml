@@ -39,17 +39,17 @@ jobs:
 
       - name: Open pull request
         env:
-          GITHUB_TOKEN: ${{ github.token }}
+          GH_TOKEN: ${{ github.token }}
           BRANCH: regenerate-advisories
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          gh auth setup-git --hostname github.com --force
           git add advisories/ data/
           if git diff --cached --quiet; then
             echo "No changes."
             exit 0
           fi
+          gh auth setup-git --hostname github.com --force
           git checkout -b "$BRANCH"
           git commit -m "Regenerate advisories"
           git push --force origin "HEAD:refs/heads/$BRANCH"
