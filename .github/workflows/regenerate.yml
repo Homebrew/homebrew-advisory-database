@@ -21,6 +21,15 @@ jobs:
       - name: Set up Homebrew
         uses: Homebrew/actions/setup-homebrew@18fcb8e3e06b4247c676c506750dc95ea7226479 # 2026.07.13.1
 
+      - name: Set up Ruby
+        uses: Homebrew/actions/setup-ruby@18fcb8e3e06b4247c676c506750dc95ea7226479 # 2026.07.13.1
+
+      - name: Run tests
+        run: rake test
+
+      - name: Build Repology index
+        run: rake repology:build
+
       - name: Regenerate advisories
         env:
           HOMEBREW_NO_AUTO_UPDATE: "1"
@@ -35,7 +44,7 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add advisories/
+          git add advisories/ data/
           if git diff --cached --quiet; then
             echo "No changes."
             exit 0
