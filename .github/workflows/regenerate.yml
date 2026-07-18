@@ -53,7 +53,7 @@ jobs:
           git checkout -b "$BRANCH"
           git commit -m "Regenerate advisories"
           git push --force origin "HEAD:refs/heads/$BRANCH"
-          if gh pr view "$BRANCH" --json number >/dev/null 2>&1; then
+          if [ -n "$(gh pr list --head "$BRANCH" --state open --json number --jq '.[].number')" ]; then
             echo "PR already open."
           else
             gh pr create --base main --head "$BRANCH" \
