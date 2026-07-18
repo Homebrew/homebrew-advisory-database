@@ -21488,14 +21488,6 @@
         "gitleaks"
       ]
     },
-    "gitless": {
-      "Debian": [
-        "gitless"
-      ],
-      "Ubuntu": [
-        "gitless"
-      ]
-    },
     "gitlint": {
       "Alpine": [
         "gitlint"
@@ -55712,6 +55704,17 @@
     "ov": {
       "FreeBSD": [
         "ov"
+      ]
+    },
+    "ovh-ttyrec": {
+      "Debian": [
+        "ttyrec"
+      ],
+      "Mageia": [
+        "ttyrec"
+      ],
+      "Ubuntu": [
+        "ttyrec"
       ]
     },
     "owamp": {
