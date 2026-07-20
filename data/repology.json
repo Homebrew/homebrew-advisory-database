@@ -4098,8 +4098,14 @@
       "Alpine": [
         "bandwhich"
       ],
+      "Debian": [
+        "rust-bandwhich"
+      ],
       "FreeBSD": [
         "bandwhich"
+      ],
+      "Ubuntu": [
+        "rust-bandwhich"
       ]
     },
     "baobab": {
@@ -18529,8 +18535,7 @@
         "forgejo-lts"
       ],
       "FreeBSD": [
-        "forgejo",
-        "forgejo-lts"
+        "forgejo"
       ],
       "Mageia": [
         "forgejo"
@@ -25147,11 +25152,26 @@
       ]
     },
     "gss-ntlmssp": {
+      "AlmaLinux": [
+        "gssntlmssp"
+      ],
       "Debian": [
         "gss-ntlmssp"
       ],
+      "Mageia": [
+        "gssntlmssp"
+      ],
+      "Rocky Linux": [
+        "gssntlmssp"
+      ],
       "Ubuntu": [
         "gss-ntlmssp"
+      ],
+      "openEuler": [
+        "gssntlmssp"
+      ],
+      "openSUSE": [
+        "gssntlmssp"
       ]
     },
     "gssdp": {
@@ -64223,6 +64243,11 @@
         "rocq"
       ]
     },
+    "rocq-micromega-plugin": {
+      "Debian": [
+        "rocq-micromega-plugin"
+      ]
+    },
     "rofi": {
       "Alpine": [
         "rofi"
@@ -66714,6 +66739,11 @@
       ],
       "openSUSE": [
         "hashicorp-serf"
+      ]
+    },
+    "serialize": {
+      "FreeBSD": [
+        "serialize"
       ]
     },
     "serie": {
