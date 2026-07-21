@@ -4103,9 +4103,6 @@
       ],
       "FreeBSD": [
         "bandwhich"
-      ],
-      "Ubuntu": [
-        "rust-bandwhich"
       ]
     },
     "baobab": {
@@ -8478,6 +8475,17 @@
         "checkbashisms"
       ]
     },
+    "checksec": {
+      "Debian": [
+        "checksec"
+      ],
+      "Ubuntu": [
+        "checksec"
+      ],
+      "openSUSE": [
+        "checksec"
+      ]
+    },
     "checkstyle": {
       "Debian": [
         "checkstyle"
@@ -9115,9 +9123,6 @@
       ],
       "FreeBSD": [
         "Clipper2"
-      ],
-      "Ubuntu": [
-        "clipper2"
       ],
       "openSUSE": [
         "Clipper2"
@@ -75064,6 +75069,9 @@
     "unordered_dense": {
       "FreeBSD": [
         "unordered-dense"
+      ],
+      "openSUSE": [
+        "unordered_dense"
       ]
     },
     "unp": {
