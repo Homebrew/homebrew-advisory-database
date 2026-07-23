@@ -5332,9 +5332,6 @@
       ],
       "FreeBSD": [
         "bitwuzla"
-      ],
-      "Ubuntu": [
-        "bitwuzla"
       ]
     },
     "bk": {
@@ -57507,9 +57504,9 @@
         "php86-soap"
       ],
       "Mageia": [
-        "php",
         "php8.4",
-        "php8.5"
+        "php8.5",
+        "php8.6"
       ],
       "Red Hat": [
         "php"
@@ -57568,9 +57565,9 @@
         "php86-soap"
       ],
       "Mageia": [
-        "php",
         "php8.4",
-        "php8.5"
+        "php8.5",
+        "php8.6"
       ],
       "Red Hat": [
         "php"
@@ -57624,9 +57621,9 @@
         "php86-soap"
       ],
       "Mageia": [
-        "php",
         "php8.4",
-        "php8.5"
+        "php8.5",
+        "php8.6"
       ],
       "Red Hat": [
         "php"
@@ -57680,9 +57677,9 @@
         "php86-soap"
       ],
       "Mageia": [
-        "php",
         "php8.4",
-        "php8.5"
+        "php8.5",
+        "php8.6"
       ],
       "Red Hat": [
         "php"
@@ -57736,9 +57733,9 @@
         "php86-soap"
       ],
       "Mageia": [
-        "php",
         "php8.4",
-        "php8.5"
+        "php8.5",
+        "php8.6"
       ],
       "Red Hat": [
         "php"
@@ -76384,6 +76381,29 @@
         "virtctl"
       ]
     },
+    "virtiofsd": {
+      "AlmaLinux": [
+        "virtiofsd"
+      ],
+      "Alpine": [
+        "virtiofsd"
+      ],
+      "Debian": [
+        "rust-virtiofsd"
+      ],
+      "Mageia": [
+        "virtiofsd"
+      ],
+      "Rocky Linux": [
+        "virtiofsd"
+      ],
+      "Ubuntu": [
+        "rust-virtiofsd"
+      ],
+      "openSUSE": [
+        "virtiofsd"
+      ]
+    },
     "virtualenv": {
       "AlmaLinux": [
         "python-virtualenv"
@@ -77898,6 +77918,14 @@
       ],
       "Ubuntu": [
         "node-wikibase-cli"
+      ]
+    },
+    "wild": {
+      "Alpine": [
+        "wild"
+      ],
+      "openSUSE": [
+        "wild"
       ]
     },
     "wildmidi": {
