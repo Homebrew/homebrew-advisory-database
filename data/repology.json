@@ -26198,6 +26198,9 @@
       ]
     },
     "heatshrink": {
+      "Alpine": [
+        "heatshrink"
+      ],
       "Debian": [
         "heatshrink"
       ],
